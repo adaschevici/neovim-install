@@ -74,6 +74,7 @@ call plug#begin('~/.config/nvim/plugged')
   " Rest of language specifics plugins
   Plug 'ternjs/tern_for_vim', { 'do': 'npm install' }
   Plug 'fatih/vim-go'
+  Plug 'cespare/vim-toml'
   Plug 'vim-ruby/vim-ruby'
   Plug 'jimenezrick/vimerl'
   Plug 'rust-lang/rust.vim'

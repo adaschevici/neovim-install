@@ -121,6 +121,7 @@ au FileType css setl sw=2 sts=2 et
 au FileType scss setl sw=2 sts=2 et
 au FileType js setl sw=2 sts=2 et
 au FileType ts setl sw=2 sts=2 et
+au FileType tsx setl sw=2 sts=2 et
 au FileType go setl sw=4 sts=4 et
 au FileType yaml setlocal ts=2 sts=2 sw=2 expandtab
 au FileType json setlocal ts=2 sts=2 sw=2 expandtab
@@ -223,4 +224,4 @@ command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
 " au BufRead,BufNewFile *.md setlocal textwidth=120
 " au BufRead,BufNewFile *.md setlocal textwidth=120
-
+au BufEnter *.tsx :setlocal filetype=typescript.tsx

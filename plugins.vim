@@ -81,7 +81,8 @@ let g:ale_linters = {
 \      'js': ['eslint'],
 \      'jsx': ['eslint'],
 \      'python': ['pylint'],
-\      'py': ['pylint']
+\      'py': ['pylint'],
+\      'go': ['~/.go/bin/gopls']
 \}
 
 let g:ale_linters_explicit = 1
@@ -96,7 +97,8 @@ let g:ale_fixers = {
 \      'tsx': ['prettier'],
 \      'json': ['prettier'],
 \      'graphql': ['prettier'],
-\      'css': ['prettier']
+\      'css': ['prettier'],
+\      'go': ['~/.go/bin/gopls']
 \}
 
 let g:ale_sign_error = '✘'
