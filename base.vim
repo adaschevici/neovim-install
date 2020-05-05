@@ -77,7 +77,6 @@ inoremap [;<CR> [<CR>];<ESC>O
 
 " Required:
 filetype plugin indent on
-syntax enable
 
 " Remote plugins
 " "let g:python2_host_prog='/usr/local/opt/python27/bin/python2.7'
@@ -94,7 +93,8 @@ set history=700                " Sets how many lines of history VIM has to remem
 
 set nocompatible
 set background=dark
-colo solarized
+colo nightowl
+syntax enable
 syntax on
 
 set showmode
@@ -222,6 +222,6 @@ command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 " " bind \ (backward slash) to grep shortcut
 " command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
-" au BufRead,BufNewFile *.md setlocal textwidth=120
-" au BufRead,BufNewFile *.md setlocal textwidth=120
+au BufRead,BufNewFile *.md setlocal textwidth=120
+au BufRead,BufNewFile *.md setlocal textwidth=120
 au BufEnter *.tsx :setlocal filetype=typescript.tsx

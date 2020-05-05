@@ -75,6 +75,9 @@ set statusline+=%*
 let g:ale_python_pylint_executable = expand('~/.pyenv/versions/local/bin/pylint') "expand('~/.pyenv/shims/pylint')
 let g:ale_python_pylint_use_global = 0
 
+let g:ale_go_gopls_executable = expand('~/.go/bin/gopls')
+let g:ale_go_gopls_use_global = 0
+
 " w0rp-ale config
 let g:ale_linters = {
 \      'javascript': ['eslint'],
@@ -82,7 +85,7 @@ let g:ale_linters = {
 \      'jsx': ['eslint'],
 \      'python': ['pylint'],
 \      'py': ['pylint'],
-\      'go': ['~/.go/bin/gopls']
+\      'go': ['gopls']
 \}
 
 let g:ale_linters_explicit = 1
@@ -98,7 +101,6 @@ let g:ale_fixers = {
 \      'json': ['prettier'],
 \      'graphql': ['prettier'],
 \      'css': ['prettier'],
-\      'go': ['~/.go/bin/gopls']
 \}
 
 let g:ale_sign_error = '✘'
