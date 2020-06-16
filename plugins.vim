@@ -1,6 +1,6 @@
 " ignore git ignored files
 let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
-
+let g:jedi#force_py_version = '3.8.3'
 let g:coc_global_extensions = ['coc-solargraph']
 "
 " fugitive git bindings
