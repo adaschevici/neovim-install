@@ -101,6 +101,7 @@ let g:ale_fixers = {
 \      'json': ['prettier'],
 \      'graphql': ['prettier'],
 \      'css': ['prettier'],
+\      'rust': ['rustfmt'],
 \}
 
 let g:ale_sign_error = '✘'

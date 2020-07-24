@@ -93,10 +93,20 @@ set history=700                " Sets how many lines of history VIM has to remem
 
 set nocompatible
 set background=dark
-colo nightowl
 syntax enable
 syntax on
 
+if (has("termguicolors"))
+ set termguicolors
+endif
+
+" For Neovim 0.1.3 and 0.1.4
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+""""" enable the theme
+
+syntax enable
+colorscheme nightowl2
 set showmode
 
 set autoindent
@@ -206,7 +216,8 @@ endif
 nnoremap <leader>l :grep! "\b<C-R><C-W>\b"<CR>:cw<CR>
 " bind \ (backward slash) to grep shortcut
 command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
- 
+
+" let $PYTHONPATH = getcwd()
 " " ripgrep
 " if executable('rg')
 "   let $FZF_DEFAULT_COMMAND = 'rg --files --hidden --follow --glob "!.git/*"'
@@ -222,6 +233,9 @@ command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 " " bind \ (backward slash) to grep shortcut
 " command -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
+
+" To enable the lightline theme
+let g:lightline = { 'colorscheme': 'nightowl' }
 au BufRead,BufNewFile *.md setlocal textwidth=120
 au BufRead,BufNewFile *.md setlocal textwidth=120
 au BufEnter *.tsx :setlocal filetype=typescript.tsx
