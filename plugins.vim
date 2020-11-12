@@ -72,8 +72,8 @@ set statusline+=%*
 
 " ALE config - for python
 " Use the global executable with a special name for flake8.
-let g:ale_python_pylint_executable = expand('~/.pyenv/versions/local/bin/pylint') "expand('~/.pyenv/shims/pylint')
-let g:ale_python_pylint_use_global = 0
+"let g:ale_python_pylint_executable = expand('~/.pyenv/versions/local/bin/pylint') "expand('~/.pyenv/shims/pylint')
+"let g:ale_python_pylint_use_global = 0
 
 let g:ale_go_gopls_executable = expand('~/.go/bin/gopls')
 let g:ale_go_gopls_use_global = 0
@@ -102,7 +102,9 @@ let g:ale_fixers = {
 \      'graphql': ['prettier'],
 \      'css': ['prettier'],
 \      'rust': ['rustfmt'],
+\      'python': ['autopep8'],
 \}
+
 
 let g:ale_sign_error = '✘'
 let g:ale_sign_warning = '⚠'

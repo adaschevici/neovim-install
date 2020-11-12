@@ -1,4 +1,4 @@
-"dein Scripts-----------------------------
+":call coc#util#install()dein Scripts-----------------------------
 if &compatible
   set nocompatible               " Be iMproved
 endif
@@ -25,7 +25,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'scrooloose/nerdtree'
   Plug 'tpope/vim-sensible'
   Plug 'ctrlpvim/ctrlp.vim'
-  Plug 'terryma/vim-multiple-cursors'
+  Plug 'mg979/vim-visual-multi', {'branch': 'master'}
   Plug 'tpope/vim-unimpaired'
   Plug 'AndrewRadev/linediff.vim'
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --no-bash' }
@@ -61,6 +61,7 @@ call plug#begin('~/.config/nvim/plugged')
   " Plug 'ncm2/ncm2-jedi'
   " Plug 'davidhalter/jedi-vim'
   Plug 'neoclide/coc.nvim', {'branch': 'release'}
+  " Plug 'neoclide/coc.nvim', {'do': 'npx yarn install --frozen-lockfile'}
   Plug 'ncm2/ncm2-coc'
   Plug 'ncm2/ncm2-racer'
   Plug 'ncm2/ncm2-ultisnips'
@@ -96,10 +97,14 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'mattn/emmet-vim'
   Plug 'racer-rust/vim-racer'
   Plug 'nvie/vim-flake8'
+  Plug 'dart-lang/dart-vim-plugin'
 
 " Required:
 call plug#end()
 
+let g:LanguageClient_serverCommands = {
+\ 'vue': ['vls']
+\}
 "" configures plugin manager and plugins
 source ~/.config/nvim/base.vim
 source ~/.config/nvim/plugins.vim
